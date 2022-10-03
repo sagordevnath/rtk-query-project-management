@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { userLoggedOut } from "../auth/authSlice";
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: process.env.REACT_APP_API_URL,
+    baseUrl:"https://project-management--server.herokuapp.com",
     prepareHeaders: async (headers, { getState, endpoint }) => {
         const token = getState()?.auth?.accessToken;
         if (token) {
